@@ -54,3 +54,65 @@ const player = {
 console.log(player.name);
 console.log(player["name"]);
 player.lastNmae = "potato"; //object 추가
+
+// 함수 : 반복해서 쓰는 코드를 편하게 하기 위한 코드 조각
+
+function sayHello() {
+    console.log("Hello!");
+}
+
+alert();
+sayHello();
+
+//
+function plus(a,b) {
+    console.log(a + b);
+}
+
+plus(8,60);
+
+function divide(a,b) {
+    console.log(a / b);
+}
+
+divide(98,20);
+
+const player = {
+    name : "nico",
+    sayHello : function (otherPersonsName) {
+        console.log("helo!" + otherPersonsName);
+    },
+    };
+
+player.sayHello(otherPersonsName);
+
+// 리스트쓸때의 문제점 : 원하는 property들을 그룹으로 붂고 싶을 때.
+
+const player = {
+    name : "Nico",
+    age : 98,
+};
+
+console.log(player);
+player.sexy = "soon"
+
+console.log(player, console);
+
+function plus(a , b) {
+    console.log(a + b);
+}
+
+// function은 순소거 중요하다. a,b 위치가 바뀌면 안됨.
+
+
+
+
+const age = 25;
+function calculateKrAge(ageOfForeigner) {
+    return ageOfForeigner + 2;
+}
+const KrAge = calculateKrAge(age);
+console.log(krAge);
+
+// 만약 함수의 결괏값을 보기 원한다면, return. return은 함수에 새로운 반환값을 부여한다. 함숫값보다는 함수의 작동만을 원한다면 return을 쓰지않아도 된다.
+//return을 하지 않는다면, 동작은 할지라도 console에는 undefined로 표시된다.
