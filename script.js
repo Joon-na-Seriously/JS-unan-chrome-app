@@ -114,5 +114,3 @@ function calculateKrAge(ageOfForeigner) {
 const KrAge = calculateKrAge(age);
 console.log(krAge);
 
-// 만약 함수의 결괏값을 보기 원한다면, return. return은 함수에 새로운 반환값을 부여한다. 함숫값보다는 함수의 작동만을 원한다면 return을 쓰지않아도 된다.
-//return을 하지 않는다면, 동작은 할지라도 console에는 undefined로 표시된다.
