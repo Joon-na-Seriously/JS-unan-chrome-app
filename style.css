@@ -1,1 +1,17 @@
 body {background-color: antiquewhite;}
+
+h1 {
+    color : cornflowerblue;
+}
+
+.active {
+    color : tomato;
+}
+
+.sexy_font {
+    color : blue;
+}
+
+.hidden {
+    display : none;
+}
