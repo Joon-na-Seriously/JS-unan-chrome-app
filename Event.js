@@ -42,4 +42,4 @@ if(savedUsername === null) {
     /// show the greetings
     paintGreetings(savedUsername)
     greeting.innerText = `Hello ${username}`;
-} 
+}  

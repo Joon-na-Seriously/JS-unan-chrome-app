@@ -23,3 +23,6 @@ const author = document.querySelector("#quote span:last-child");
 console.log(Math.floor(Math.random()*10));
 
 const todayQuote = quotes[Math.floor(Math.random() * quotes.random()*10)];
+
+
+

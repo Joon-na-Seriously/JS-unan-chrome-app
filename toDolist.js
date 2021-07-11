@@ -15,15 +15,17 @@ function saveTodos() {
 function deleteToDo(event) {
     const li = event.target.parentElement;
     li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== li.id);
 }
 function paintToDo(newTodo) {
- console.log("i will paint",)
+ console.log("i will paint",);
  const li = document.createElement("li");
+ li.id = newTodo.id;
  const span = document.createElement("span");
  span.innerText = newTodo; 
  const button = document.createElement("button");
  button.innerText = "🤢";
- button.addEventListener("click",deleteToDo )
+ button.addEventListener("click",deleteToDo );
 li.appendChild(span);
 li.appendChild(button);
 
@@ -35,9 +37,13 @@ function handleToDoSubmit(event) {
     const newTodo = toDoInput.value;
     console.log(toDoInput.value);
     toDoInput.value = "";
-    paintToDo(newTodo);
-    toTos.push(newTodo);
-    paintToDo(newTodo);
+    const newTodoObj = {
+        text: newTodo,
+        id : Date.now(),
+    };
+ 
+    toDos.push(newTodoObj);
+    paintToDo(newTodoObj);
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
@@ -52,10 +58,21 @@ if (savedToDos !== null)  {
     const parsedToDos = JSON.parse(savedToDos);
     console.log(parsedtoDos);
     toDos = parsedToDos;
-    parsedToDos.forEach((item) => console.log("asda", item));
-    
+    parsedToDos.forEach(paintToDo);
 
+    ///parsedToDos.forEach((item) => console.log("asda", item));
 }
 
-sayHello("a")
+ function sexyFilter(item){
+     return item !==3
 
+}
+[1, 2, 3, 4, 5].filter(sexyFilter);
+/// [1,2,3,4].filter(sexyFilter)
+
+///sexyFilter(1) = 1
+///sexyFilter(2) = 2
+///sexyFilter(3) = 3
+///sexyFilter(4) = 4
+
+ 
